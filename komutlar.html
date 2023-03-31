@@ -24,7 +24,7 @@
 
         yeni create edeceğimiz dosyaları state 'ye ekleme; yeni dosya index.html olsun
         3.komut: git add index.html  
-                git add .       (. koyarsak hepsini ekliyor.)
+                git add *       (.(nokta) ya da * (yıldız) koyarsak hepsini ekliyor)
 
         Snapshot i almak; State den commit’e aktardım. Artık github dan bir farkı var, yeni bir index.html dosyası commitli.
         4.komut: add commit -m "girilecek mesaj içeriği"
@@ -87,6 +87,7 @@
 
         -----------------------------------------------------------
         stash       (NE KAYIT NE DE COMMİTDİR. GEÇİCİ OLARAK SAKLANIR) Her yeni stash en üste gelir
+        
         stash in işlevi: son yapmış olduğumuz commit den itibaren yapmış olduğumuz değişiklikleri bir köşede saklayıp ihtiyacımız olduğunda bize getirmek.
         
         1.Komut: git stash 
@@ -100,7 +101,7 @@
 
         4.Komut: git stash pop
         En üstteki kaydı bize geri getirir ve stash list inden getirdiği stash i siler. Değişiklikler yapılmışsa onları gösterir ve istersen add yap gibi bilgi verir. 
-        git add .
+        git *
         git commit -m ""    hem ekleyip hem commit edebiliriz.(normal komutlarımızla)
 
         5.Komut:    git stash apply stash@{0}
@@ -120,5 +121,14 @@
         main de olduğumuzu düşünelim;   (main e footer bilgilerini aktaracağız)
         3.Komut: git rebase footer
         Bu işlemde log kayıtları ve değişiklikler merge deki gibi gelir ANCAK merge (birleştirme yapılmaz, bilgi aktarılmış olur)
+
+        4.Komut:    git merge --abort 
+        conflict ile karşılaştığımız durumda merge işlemini geri almak için kullanılır.
+
+        -----------------------------------------------------------
+
+        Conflict;
+        Problem;
+        İki arkadaş bir dosyada çalıştığında, pull ya da fetch yapıldığında bilgiler çakışır ve hangisinin doğru olduğu kontrol edilmesi gerekir.
 </body>
 </html>
