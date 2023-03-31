@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Önce github da yeni repository oluşturuyoruz, (bu repository bir klasör halindedir. İsmi de pc deki klasörün ismi olacaktır )
+    repository i seçtiğimizde yeşil renkli (code) pulldown unda https adresini kopyalıyoruz,
+
+    vscode da komut sekmesini açıyoruz. 
+    github daki klasörü hangi klasörün içine koyacaksak ona geliyoruz. 
+                cd klasör-ismi
+                cd..        komutları ile.
+
+    Lokal olarak (state de) git dosya projesi oluşturmuş oluyoruz 
+        1.komut: git init
+        2.komut: git clone kopyalanan-adres
+
+    Github da yani repository de olan dosyaları, dosyalarda değişik yapıldıysa değişiklik yapılmış dosyaları ya da yeni oluşturulmuş ama eklenmemiş dosyaları görebiliyoruz. 
+        Ara komut: git status 
+
+    yeni create edeceğimiz dosyaları state 'ye ekleme; yeni dosya index.html olsun
+        3.komut: git add index.html  
+                git add .       (. koyarsak hepsini ekliyor.)
+
+    Snapshot i almak; State den commit’e aktardım. Artık github dan bir farkı var, yeni bir index.html dosyası commitli.
+        4.komut: add commit -m "girilecek mesaj içeriği"
+
+    Repository e bağlanılan brnch ismini verir (dal)
+        Ara Komut: git branch
+
+    şimdi de değişiklikleri github a ekleme. uzak 
+        5.komut:  git push -u origin main
+
+    commit edilmiş tüm değişiklikleri görmemizi sağlar. Her commitin uzun bir kodu var. bunu kullanmak istediğimizde ilk 7 karakteri kopyalamamız yeterli olacaktır 
+        Ara komut: git log
+
+    Yeni yapılan değişiklikleri yani bir commit yapmadan önceki (son) commit ile göndermek istiyorsak
+        6.Komut: git commit --amend
+    Bize mesajı değiştirip değiştirmeyeceğimizi soruyor.
+
+    Son kommitin sadece mesaj kısmını değiştirmek istiyorsak
+        7.Komut: git commit --amend -m "main 2 | yeni mesaj commit edildi."
+
+
+</body>
+</html>
